@@ -1,0 +1,18 @@
+﻿@model AlienWeightModel
+
+@{
+    ViewData["Title"] = "Alien Weight Result";
+}
+
+
+<section id="calculatorResult" class="centeredPanel">
+
+	<h2>Alien Weight Result</h2>
+
+	<p>
+		<img src="~/images/@(Model.EndingWeight).jpg">
+	</p>
+	<p>@Model.WeightToConvert lbs on Earth is @Model.GetConvertedWeight() lbs on @Model.EndingWeight</p>
+
+
+</section>

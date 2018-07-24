@@ -1,0 +1,19 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<section>
+<img src="~/images/@Model.ImageName" />
+<h3>@Model.Name</h3>
+    <p>@Model.Description</p>
+    <p>@Model.Price</p>
+    <form asp-controller="store" asp-action="addtocart" method="post">
+        <input type="number" name="quantity" value="1" />
+        <input type="hidden" value="@Model.ID" name="id" />
+        <button>Add To Cart</button>
+    </form>
+    
+</section>

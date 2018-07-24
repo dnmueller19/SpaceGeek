@@ -1,0 +1,12 @@
+﻿@model AlienTravelModel
+@{
+    ViewData["Title"] = "Alien Travel Results";
+}
+
+<section id="calculatorResult" class="centeredPanel">
+
+	<h2>Alien Travel Results</h2>
+	<p><img src="~/images/@(Model.EndingAge).jpg"></p>
+	<p>Traveling by @Model.Transportation to reach @Model.EndingAge it would take you @Model.GetConvertedMiles() years and you'll be @Model.NewAge() years old </p>
+
+</section>

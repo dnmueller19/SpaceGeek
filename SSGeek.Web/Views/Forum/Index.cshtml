@@ -1,0 +1,33 @@
+﻿@model IList<ForumPost>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="centeredPanel">
+
+	<h2>Index</h2>
+
+	<a asp-controller="forum" asp-action="newpost">Add New Post</a>
+
+	@if (TempData["Show_Message"] != null)
+		{ 
+			<p>New Post Added</p>
+		}
+
+	<table class="table-striped">
+		<tbody>
+			@foreach (var post in Model)
+			{
+				<tr>
+				   <td>
+						<h4>@post.Subject</h4>
+						<p>@post.Username</p>
+						@post.Message
+						@post.PostDate.Date
+						@post.PostDate.TimeOfDay
+				   </td>
+				</tr>
+			}
+			</tbody>
+		</table>
+	</section>

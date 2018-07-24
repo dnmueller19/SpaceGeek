@@ -1,0 +1,25 @@
+﻿<>@model  List<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<section id="calculatorResult" class="centeredPanel">
+<table>
+    <tbody>
+        @foreach (var product in Model)
+        { 
+        <tr>
+            <td>
+                <a asp-controller="Store" asp-action="Details" asp-route-id="@product.ID">
+                     <img src="~/images/@product.ImageName" />
+                </a>
+            </td>
+            <td>@product.Name</td>
+            <td>@product.Price.ToString("C")</td>
+        </tr>
+         }
+    </tbody>
+</table>
+</section>

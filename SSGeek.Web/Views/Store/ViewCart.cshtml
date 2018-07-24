@@ -1,0 +1,23 @@
+﻿@*15.(ViewCart View) Update the view to display the contents of the shopping cart passed in from the controller*@
+
+@model ShoppingCart
+@{
+    ViewData["Title"] = "ViewCart";
+}
+
+<h2>ViewCart</h2>
+
+<div>
+    @foreach (var item in Model.Items)
+    { 
+        <p><img src="~/images/@item.Product.ImageName"></p>
+        <p>@item.Product.Name</p>
+        <p>@item.Product.Price.ToString("C")</p>
+        <p>@item.Quantity</p>
+        <p>@item.SubTotal.ToString("C")</p>
+        <p></p>
+        <p>Grand Total</p>
+        <p>@Model.GrandTotal.ToString("C")</p>
+
+    }
+</div>
