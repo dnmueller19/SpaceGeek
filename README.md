@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Day 1 - HTTP GET
 
@@ -179,3 +180,7 @@ Add error handling to the Forum Post page to the **New Post** page that ensures 
 # Day 5 - Dependency Injection
 
 Go back to each of your days that access a database (Forum and Space Store) and apply dependency injection to the controllers so that the controllers are not instantiating their own data access layer objects.
+=======
+# SpaceGeek
+ASP.Net application that gives you calculations of your weight and age on different planets. It also determines the age you'll be when you arrive at a certain planet. Built in a message board and a store!
+>>>>>>> 782e8f5652a85f2c4d66cab13b6914137a468555
